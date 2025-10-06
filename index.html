@@ -62,4 +62,35 @@
       margin: 8px 0;
     }
 
-    .foot
+    .footer {
+      font-size: 12px;
+      color: #9a9aa2;
+      margin-top: 20px;
+    }
+
+    /* Ajustes para dispositivos de toque (mobile) */
+    @media (hover: none) {
+      main {
+        width: 90vw;
+        padding: 36px 24px;
+      }
+      .logo {
+        width: 90%;
+      }
+      h1 { font-size: 24px; }
+      p { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img src="FINAL.png" alt="Logo EVG" class="logo" />
+    <h1>Site em construção para melhor atendê-lo</h1>
+    <p>Estamos preparando um novo espaço online para apresentar nossos serviços de <strong>segurança eletrônica</strong> com a qualidade de sempre.</p>
+    <p class="footer">© <span id="y"></span> EVG Soluções em Sistemas de Segurança</p>
+  </main>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
