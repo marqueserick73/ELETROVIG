@@ -1,37 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My GitHub Page</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EVG | Site em construção</title>
+  <meta name="description" content="EVG Soluções em Sistemas de Segurança — Site em construção." />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #89f7fe, #66a6ff);
-      color: #222;
-      text-align: center;
-      padding-top: 10%;
+    :root{
+      --bg: #0f0f13;
+      --text:#e9e9ee;
+      --muted:#b7b8c0;
+      --brand:#2A1940;
+      --brand-3:#7F3939;
     }
-    h1 {
-      font-size: 2.5em;
+    html,body{height:100%;margin:0;}
+    body{
+      display:grid;place-items:center;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: radial-gradient(50rem 50rem at 80% -10%, rgba(127,57,57,0.15), transparent 40%),
+                  radial-gradient(40rem 40rem at -10% 110%, rgba(42,25,64,0.25), transparent 60%),
+                  var(--bg);
+      color:var(--text);
     }
-    p {
-      font-size: 1.2em;
+    main{
+      width:min(680px, 90vw);
+      text-align:center;
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:22px;
+      padding:40px 32px;
+      box-shadow:0 20px 60px rgba(0,0,0,0.4);
+      background:rgba(255,255,255,0.02);
+      backdrop-filter:blur(6px);
     }
-    a {
-      color: #0044cc;
-      text-decoration: none;
-      font-weight: bold;
+    .badge{
+      display:inline-block;
+      font-size:12px;
+      letter-spacing:0.6px;
+      text-transform:uppercase;
+      color:#fff;
+      background:linear-gradient(135deg, var(--brand), var(--brand-3));
+      padding:6px 10px;
+      border-radius:999px;
+      margin-bottom:10px;
+      border:1px solid rgba(255,255,255,0.12);
     }
-    a:hover {
-      text-decoration: underline;
+    h1{
+      font-size:clamp(22px,3.4vw,32px);
+      margin:8px 0 10px;
     }
+    p{color:var(--muted);}
+    .footer{font-size:12px;color:#9a9aa2;margin-top:14px;}
   </style>
 </head>
 <body>
-  <h1>🚀 Hello, GitHub Pages!</h1>
-  <p>This is a simple HTML page hosted on <strong>GitHub Pages</strong>.</p>
-  <p>Edit <code>index.html</code> to make it yours.</p>
-  <p><a href="https://github.com/">Visit GitHub</a></p>
+  <main>
+    <span class="badge">Em breve</span>
+    <h1>Site em construção para melhor atendê-lo</h1>
+    <p>Estamos preparando um novo espaço online para apresentar nossos serviços de <strong>segurança eletrônica</strong> com a qualidade de sempre.</p>
+    <p class="footer">© <span id="y"></span> EVG Soluções em Sistemas de Segurança</p>
+  </main>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
 </html>
